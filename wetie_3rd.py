@@ -45,18 +45,14 @@ test_loader = torch.utils.data.DataLoader(
     batch_size=batch_size,
     shuffle=False
 )
-self.dropout = nn.Dropout(0.2)
 
 model=nn.Sequential(
     nn.Linear(5,hidden1),
     nn.ReLU(),
-    self.dropout,
     nn.Linear(hidden1,hidden2),
     nn.ReLU(),
-    self.dropout,
     nn.Linear(hidden2,hidden3),
     nn.ReLU(),
-    self.dropout,
     nn.Linear(hidden3,1)
 )
 
